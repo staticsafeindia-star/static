@@ -1,0 +1,578 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "primary": "#00408b",
+                    "inverse-primary": "#adc7ff",
+                    "primary-fixed-dim": "#adc7ff",
+                    "secondary-container": "#2dbcfe",
+                    "surface-variant": "#e0e3e6",
+                    "on-primary-container": "#bfd2ff",
+                    "outline": "#727784",
+                    "primary-fixed": "#d8e2ff",
+                    "tertiary-fixed": "#d6e3ff",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#0d5bbc",
+                    "on-tertiary-fixed-variant": "#364764",
+                    "on-tertiary-container": "#c1d3f6",
+                    "surface-dim": "#d8dadd",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#eceef1",
+                    "primary-container": "#0057b8",
+                    "inverse-on-surface": "#eff1f4",
+                    "secondary": "#00658d",
+                    "tertiary-fixed-dim": "#b5c7ea",
+                    "tertiary": "#324360",
+                    "secondary-fixed-dim": "#82cfff",
+                    "surface": "#f7f9fc",
+                    "background": "#f7f9fc",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e6e8eb",
+                    "outline-variant": "#c2c6d4",
+                    "surface-bright": "#f7f9fc",
+                    "on-secondary-container": "#004866",
+                    "secondary-fixed": "#c6e7ff",
+                    "on-primary-fixed": "#001a41",
+                    "on-surface": "#191c1e",
+                    "surface-container-low": "#f2f4f7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#004c6b",
+                    "on-background": "#191c1e",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed": "#001e2d",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#e0e3e6",
+                    "on-surface-variant": "#424752",
+                    "inverse-surface": "#2d3133",
+                    "on-primary-fixed-variant": "#004493",
+                    "on-tertiary-fixed": "#071c36",
+                    "tertiary-container": "#495b79"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "unit": "8px",
+                    "section-gap": "120px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "display-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    }catch(_e){}</script></head><body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-sm transition-all duration-500 ease-in-out hover:backdrop-blur-lg bg-white/80">
+<div class="flex justify-between items-center max-w-container-max mx-auto py-4 px-margin-desktop w-full"><div class="flex items-center shrink-0 gap-4"><img alt="StaticSafe India Logo" class="w-auto h-16 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD3YlucdG0dVvCXl4tpEXq2mYfe5xDqdnnOhYxfBRbSqqApNzo6ajlNY3IHxcMTD5pSWATai59D_9XUAH9T23-f_scsiE13JlSIjcX9EpOX9_dZ_XshfeK68z5GYaGdkXLNXCsqaQNXaahuLH9I3RBleN7JekwQPr_BZyvNW9v1jm97WKI1yz5UgWmk5dv1NdMxTl1pdpaoTJphAM61lLLeYjFXWbR6wRvZOahI4xi5DSlSajMjp4A5qgoWel7Ai9iw-o"><div class="flex flex-col leading-tight"><span class="font-bold text-primary leading-none transition-all text-2xl">StaticSafe</span><span class="font-medium text-on-surface-variant uppercase tracking-widest transition-all text-[10px]">India Pvt. Ltd.</span></div></div><div class="hidden md:flex items-center flex-1 justify-center gap-x-12 font-medium"><a class="text-primary font-bold border-b-2 border-primary pb-1 text-sm" href="#">Home</a><a class="text-on-surface hover:text-primary transition-all duration-300 relative group text-sm" href="#">Products<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span></a><a class="text-on-surface hover:text-primary transition-all duration-300 relative group text-sm" href="#">Solutions<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span></a><a class="text-on-surface hover:text-primary transition-all duration-300 relative group text-sm" href="#">Industries<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span></a><a class="text-on-surface hover:text-primary transition-all duration-300 relative group text-sm" href="#">About Us<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span></a><a class="text-on-surface hover:text-primary transition-all duration-300 relative group text-sm" href="#">Contact<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span></a></div><div class="flex items-center gap-4"><button class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors flex items-center justify-center"><span class="material-symbols-outlined text-xl">search</span></button><button class="bg-primary text-white px-5 py-2 rounded-full font-bold text-sm hover:bg-primary-container transition-all shadow-sm">Request Quote</button><button class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors relative flex items-center justify-center"><span class="material-symbols-outlined text-xl">shopping_cart</span><span class="absolute top-0 right-0 bg-error text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full font-bold">0</span></button></div></div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent z-10"></div>
+<img class="w-full h-full object-cover object-center" alt="Modern ESD manufacturing facility with professional staff and a friendly greeting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrXPdOjLshfkQ9Y4-dFO1uMCy27vNV-im3bOnb8DznkThEA8JtEf8YfWa2abTimeJJ1yYXmXs_ae3l0o3jdSRp57CpvgOCRrCZrbkL4cggONvWbJEOiSv2hsCYGwm9b8DRb5tbStiAJX4cVrBTaaUsatZPZhwkplkSC44msJHC0VKTvoN5LWq9DmAp0y_UPE6VipbmihJ2xbmjgQoDli0wwGCKG9BO0kN_hJ4Cb_JDpm75vn-HbwkA9Q">
+</div>
+<div class="relative z-20 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-4xl">
+<span class="inline-block px-4 py-1 bg-secondary-container/20 text-on-primary border border-white/20 rounded-full font-label-caps text-label-caps mb-6">
+                    ISO 9001:2015 CERTIFIED
+                </span>
+<h1 class="font-display-lg text-display-lg text-white mb-6 leading-tight">
+                    Complete ESD &amp; Anti-Static Solutions For <span class="text-secondary-container">Modern Manufacturing</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-10 max-w-2xl">
+                    Protect sensitive electronics, improve product reliability, and maintain ESD-safe environments with professional ESD products and solutions. Trusted by global leaders in Electronics &amp; EMS.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary-container text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition-transform shadow-lg shadow-primary/20">
+                        Request Quote
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border-2 border-white/40 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all">
+                        Explore Products
+                    </button>
+</div>
+</div>
+</div>
+<!-- Trust Bar -->
+<div class="absolute bottom-0 w-full bg-white/5 backdrop-blur-xl border-t border-white/10 z-20">
+<div class="max-w-container-max mx-auto px-margin-desktop py-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-secondary-container">location_on</span>
+<span class="font-label-caps text-label-caps">PAN INDIA SUPPLY</span>
+</div>
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-secondary-container">bolt</span>
+<span class="font-label-caps text-label-caps">FAST RFQ RESPONSE</span>
+</div>
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-secondary-container">engineering</span>
+<span class="font-label-caps text-label-caps">INDUSTRIAL EXPERTISE</span>
+</div>
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-secondary-container">support_agent</span>
+<span class="font-label-caps text-label-caps">TECHNICAL SUPPORT</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Why StaticSafe -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-20 scroll-reveal visible">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Why Partner With StaticSafe India?</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">We provide more than just products; we provide end-to-end reliability for your mission-critical manufacturing processes.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="industrial-card bg-white p-8 rounded-2xl border border-outline-variant scroll-reveal group visible">
+<div class="w-16 h-16 bg-surface-container-highest rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">inventory_2</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Complete ESD Solutions</h3>
+<p class="text-on-surface-variant">From ground up EPA setup to specialized tools, we cover every aspect of static control.</p>
+</div>
+<!-- Card 2 -->
+<div class="industrial-card bg-white p-8 rounded-2xl border border-outline-variant scroll-reveal group visible">
+<div class="w-16 h-16 bg-surface-container-highest rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">verified</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Quality Products</h3>
+<p class="text-on-surface-variant">Stringent quality checks ensuring every product meets international ESD standards.</p>
+</div>
+<!-- Card 3 -->
+<div class="industrial-card bg-white p-8 rounded-2xl border border-outline-variant scroll-reveal group visible">
+<div class="w-16 h-16 bg-surface-container-highest rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">psychology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Technical Expertise</h3>
+<p class="text-on-surface-variant">Our engineers help you choose the right materials for specific industrial environments.</p>
+</div>
+<!-- Card 4 -->
+<div class="industrial-card bg-white p-8 rounded-2xl border border-outline-variant scroll-reveal group visible">
+<div class="w-16 h-16 bg-surface-container-highest rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">local_shipping</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">PAN India Supply</h3>
+<p class="text-on-surface-variant">Robust logistics network ensuring timely delivery across all major industrial hubs.</p>
+</div>
+<!-- Card 5 -->
+<div class="industrial-card bg-white p-8 rounded-2xl border border-outline-variant scroll-reveal group visible">
+<div class="w-16 h-16 bg-surface-container-highest rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">support</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Fast Support</h3>
+<p class="text-on-surface-variant">Dedicated account managers for quick resolution of queries and technical help.</p>
+</div>
+<!-- Card 6 -->
+<div class="industrial-card bg-white p-8 rounded-2xl border border-outline-variant scroll-reveal group visible">
+<div class="w-16 h-16 bg-surface-container-highest rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">handshake</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Reliable Service</h3>
+<p class="text-on-surface-variant">A partnership approach focused on your long-term manufacturing success.</p>
+</div>
+</div>
+</section>
+<!-- Product Experience (Bento Grid Style) -->
+<section class="bg-surface-container py-section-gap">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 scroll-reveal visible">
+<div class="max-w-2xl">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Precision-Engineered ESD Products</h2>
+<p class="text-on-surface-variant">Explore our comprehensive range of high-performance anti-static equipment designed for modern EPA (Electrostatic Protected Areas).</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 group mt-6 md:mt-0" href="#">
+                    View Entire Catalogue
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Product Card 1 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all scroll-reveal visible">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" data-alt="A macro studio shot of premium blue adjustable ESD wrist straps with coiled grounding cords. The image is clean, sharp, and reflects professional technical quality, set against a neutral gray background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQp9SlpL_Uxh-r1U4IpJ7zSilZjH4sbTZ3B3FFRDKl0o-9u9YdGJf3qAUB-wWdSRNcsddV2IEdU1BBOrI8CkC6p0RLaRe-OT2SfUwaPEvvUQAjB_fvBwAr3ka545HJpynkiKhICkGc0cUPDb1bqJM9g-qnStSB8PR9apCyWUC2wmeI5B4BTqx0oztZOPe686O6jtZjAWIH6xkwJ5PJ_eTMPhoxPLbzOE5gTo28k_67ftHcIEoZbkcBXg">
+</div>
+<div class="p-6">
+<h4 class="font-headline-sm text-headline-sm mb-2">Wrist Straps</h4>
+<p class="text-on-surface-variant text-sm mb-4">Personal grounding for operators at workstations.</p>
+<button class="text-primary font-bold text-sm border-b border-primary/20 pb-1">Explore</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all scroll-reveal visible">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" data-alt="Durable two-layer ESD table mats in green and blue colors displayed in a clean industrial setup. The top dissipative layer is textured, while the bottom conductive layer is black. High-resolution product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbJQUcJAPea5MIjPqR1SNs4G6O-RGkRwaKAXEHkWP57NPaP9n5a8oUKeLhIuPv_80LZ-UIdqewvgsJxT934GXk7cnjmZNM6U9-cebmSriWVmsbE5MYluvS0h2G2ikqvb6FB6ylML358-s_Wua-fLKdoYuSsgye6ZEg-Be6OLX10e17YxicNH-lAfCB9pj3CC9AiMjEGNurFYrXzK6NRPmxGKNQ6ILIYycqB58FZuTggmH_N1yKb8QIAQ">
+</div>
+<div class="p-6">
+<h4 class="font-headline-sm text-headline-sm mb-2">ESD Mats</h4>
+<p class="text-on-surface-variant text-sm mb-4">Surface protection for workbenches and flooring.</p>
+<button class="text-primary font-bold text-sm border-b border-primary/20 pb-1">Explore</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all scroll-reveal visible">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" data-alt="Professional ESD garments including lab coats and caps with conductive grid patterns. The garments are modeled in a sterile cleanroom environment with bright white lighting, showing high-quality stitching and fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwR-mPP7V4BwD6QyeHNW4Iu3wo9BaMZx57NqvDAgqEBwOIv_9nAv_dDj5BYKj2l_7AJSwnpdXkRdHlBNk5cxJkiomDMX16vZayOcPfOQXQDlm-vOQ6_W-MZi84dosKA2nIHv3ZC7y5LO_Svw8N1c-NZ5SCxil5TGUziw9FYogpmtoncuWzsjVuFErINp4zpK-szXuDDky2wjAD_JhjAtoJt6xmeI7sjq1DiutIp3_VqxwYIGFNOsSGdw">
+</div>
+<div class="p-6">
+<h4 class="font-headline-sm text-headline-sm mb-2">ESD Garments</h4>
+<p class="text-on-surface-variant text-sm mb-4">Shielding operators to prevent field-induced charges.</p>
+<button class="text-primary font-bold text-sm border-b border-primary/20 pb-1">Explore</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all scroll-reveal visible">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" data-alt="Advanced industrial benchtop air ionizer with dual fans, blowing ionized air onto a PCB. High-tech engineering aesthetic with status LEDs glowing, suggesting active static neutralization in an EPA environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByXFFrlr2o_qJ011OPqP59LVBJ5gjVwXJcVsIJe4zXE39Nfbxi-o3Hrph61dx3anDa8qjVyCVuzKNW3D_eggDcob05bPNGKOMP-w5n0AJIwoN1l6i0vmMKJnFO0VMY8hpP9Xqw3K6Zdo_GaIKvM2RFPN0r6HRHF9aDVGHdLjtaH7WTgleQUvljloAGx-402Hp73OdKiYLgAzvwxA283JlI6VjDkHnjrbuG6sB3RyfUS0-F_gxb6BBg3A">
+</div>
+<div class="p-6">
+<h4 class="font-headline-sm text-headline-sm mb-2">Ionizers</h4>
+<p class="text-on-surface-variant text-sm mb-4">Neutralizing static charges on non-conductors.</p>
+<button class="text-primary font-bold text-sm border-b border-primary/20 pb-1">Explore</button>
+</div>
+</div>
+<!-- More cards can be added here -->
+<!-- Product Card 5 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all scroll-reveal visible">
+<div class="h-48 overflow-hidden">
+<img alt="Professional ESD safety footwear including shoes and clogs with anti-static soles, displayed in a clean industrial setting." class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+</div>
+<div class="p-6">
+<h4 class="font-headline-sm text-headline-sm mb-2">ESD Footwear</h4>
+<p class="text-on-surface-variant text-sm mb-4">Specialized anti-static shoes for safe floor grounding.</p>
+<button class="text-primary font-bold text-sm border-b border-primary/20 pb-1">Explore</button>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all scroll-reveal visible">
+<div class="h-48 overflow-hidden">
+<img alt="Cleanroom supplies including lint-free wipes, swabs, and sterile packaging materials arranged neatly." class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+</div>
+<div class="p-6">
+<h4 class="font-headline-sm text-headline-sm mb-2">Cleanroom Supplies</h4>
+<p class="text-on-surface-variant text-sm mb-4">Contamination control for sensitive environments.</p>
+<button class="text-primary font-bold text-sm border-b border-primary/20 pb-1">Explore</button>
+</div>
+</div>
+<!-- Product Card 7 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all scroll-reveal visible">
+<div class="h-48 overflow-hidden">
+<img alt="Ergonomic ESD workstation with integrated grounding points, tool racks, and anti-static lighting." class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+</div>
+<div class="p-6">
+<h4 class="font-headline-sm text-headline-sm mb-2">ESD Workstations</h4>
+<p class="text-on-surface-variant text-sm mb-4">Modular benches designed for static-safe assembly.</p>
+<button class="text-primary font-bold text-sm border-b border-primary/20 pb-1">Explore</button>
+</div>
+</div>
+<!-- Product Card 8 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all scroll-reveal visible">
+<div class="h-48 overflow-hidden">
+<img alt="Digital ESD test equipment including surface resistance meters and wrist strap testers on a lab bench." class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+</div>
+<div class="p-6">
+<h4 class="font-headline-sm text-headline-sm mb-2">ESD Test Equipment</h4>
+<p class="text-on-surface-variant text-sm mb-4">Precision instruments for monitoring ESD compliance.</p>
+<button class="text-primary font-bold text-sm border-b border-primary/20 pb-1">Explore</button>
+</div>
+</div></div>
+</div>
+</section>
+<!-- Industries We Serve -->
+<section class="py-section-gap">
+<div class="px-margin-desktop max-w-container-max mx-auto text-center mb-16 scroll-reveal visible">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Industries We Empower</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Specialized ESD solutions tailored for sectors where precision is non-negotiable and failure is not an option.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal visible">
+<!-- Industry 1: Electronics & EMS -->
+<div class="relative group h-80 overflow-hidden cursor-pointer rounded-2xl">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" data-alt="A close-up of high-speed automated PCB assembly line in an EMS facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-feNt_WBml6knzUtlphNcE05xEkWKB-UBpCUaK5tvCSdRsA1-smej_OmdEr7qSy3_a43uclgMMRokpcDbW-Mrovfs_AF-pAvyUWaCVtNcyKn0rNRquP7Gt9mi0M_TnVH9oVWFmzjISrV1FSx_aJQvt8l-mjw81G51RUCGoh-0LmV4VCsMxrWhdF8smVClS3ttr41ygZzadOHjPsCUhcNNxRyDp6ZFaYbZExjikth4vBwzT6WAVcNH3w">
+<div class="absolute inset-0 bg-primary/60 group-hover:bg-primary/40 transition-colors duration-500 flex flex-col items-center justify-center p-6">
+<h3 class="text-white font-headline-sm text-headline-sm font-bold text-center mb-2">Electronics &amp; EMS</h3>
+<div class="w-0 h-1 bg-secondary-container transition-all duration-500 group-hover:w-16"></div>
+</div>
+</div>
+<!-- Industry 2: Semiconductor -->
+<div class="relative group h-80 overflow-hidden cursor-pointer rounded-2xl">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" data-alt="Interior of a semiconductor fabrication plant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyKsss9FDhooUeW2m-DRPrFikiECAflTU5EiJMc5DWP3dq0Zi98R3elMBD_IKBy1vR8_KV0mXm101-3CV9maHxs09pNX9I_s52IjWnVjMPzzbWY8jUQlSZiVFcJXLLw6HuAjdbRP3uU_WmqcHXg8XaQS3mToxXd4CPgsEDEbGUIvlzMnKM319sqMsUkKKihy0N9e5zxgwoAMAalc069JZAXkXzWpTRhZx3IdCihIx_2szwAqPu8S0ZLw">
+<div class="absolute inset-0 bg-primary/60 group-hover:bg-primary/40 transition-colors duration-500 flex flex-col items-center justify-center p-6">
+<h3 class="text-white font-headline-sm text-headline-sm font-bold text-center mb-2">Semiconductor</h3>
+<div class="w-0 h-1 bg-secondary-container transition-all duration-500 group-hover:w-16"></div>
+</div>
+</div>
+<!-- Industry 3: Automotive -->
+<div class="relative group h-80 overflow-hidden cursor-pointer rounded-2xl">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" data-alt="Advanced automotive electronic control unit assembly line." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzGych7bTZD6Txu1k2-7xJz1kriRlQReqZUCiKhBXc3ctn3MTeuK35c3T3Xc6-xSNCsSKoUrzUqL8GDAkZ2jSHoThqksLeNiAO3u7GCln3yMZ5GdinwYb_kR8rLJZ6KK9inDHV1nmnupSLEOHCfrYAbNRxd15-zoza6Iu5FGXmMXiSRJqxWnwSLIOgNMwQXiuaCb2kUtfSGaP-XtMEFREUT6-7N9DRYNeY0wemq1j-uQX-yLkszqwdlA">
+<div class="absolute inset-0 bg-primary/60 group-hover:bg-primary/40 transition-colors duration-500 flex flex-col items-center justify-center p-6">
+<h3 class="text-white font-headline-sm text-headline-sm font-bold text-center mb-2">Automotive</h3>
+<div class="w-0 h-1 bg-secondary-container transition-all duration-500 group-hover:w-16"></div>
+</div>
+</div>
+<!-- Industry 4: Medical Tech -->
+<div class="relative group h-80 overflow-hidden cursor-pointer rounded-2xl">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" data-alt="Cleanroom manufacturing for medical electronics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaQcog6RSbZxhyLQ_1ToMdr2mCCd0ZmU714OMX66nsRa7nca47y7SHXvrN739qq3NSqA-soG30Sk8amMKzvC3mue0UjmR4hHwB83qfEW3-SLIRIDz-f_MjDfjOytzc2PcDkRh3zT-izo3XCyttnkLQRB56WQiLsiqu2vKfIi-AypGEmlW-RiP8Vu-AjgCPBBb2a3Ldrw-oSD2FTiDbLF9l_uboOjyr_soGeKME7Avb0tGzjvFiVrHXiQ">
+<div class="absolute inset-0 bg-primary/60 group-hover:bg-primary/40 transition-colors duration-500 flex flex-col items-center justify-center p-6">
+<h3 class="text-white font-headline-sm text-headline-sm font-bold text-center mb-2">Medical Tech</h3>
+<div class="w-0 h-1 bg-secondary-container transition-all duration-500 group-hover:w-16"></div>
+</div>
+</div>
+<!-- Industry 5: Aerospace & Defense -->
+<div class="relative group h-80 overflow-hidden cursor-pointer rounded-2xl">
+<img alt="Aerospace electronics assembly" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+<div class="absolute inset-0 bg-primary/60 group-hover:bg-primary/40 transition-colors duration-500 flex flex-col items-center justify-center p-6">
+<h3 class="text-white font-headline-sm text-headline-sm font-bold text-center mb-2">Aerospace &amp; Defense</h3>
+<div class="w-0 h-1 bg-secondary-container transition-all duration-500 group-hover:w-16"></div>
+</div>
+</div>
+<!-- Industry 6: Data Centers -->
+<div class="relative group h-80 overflow-hidden cursor-pointer rounded-2xl">
+<img alt="Modern data center server room" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+<div class="absolute inset-0 bg-primary/60 group-hover:bg-primary/40 transition-colors duration-500 flex flex-col items-center justify-center p-6">
+<h3 class="text-white font-headline-sm text-headline-sm font-bold text-center mb-2">Data Centers</h3>
+<div class="w-0 h-1 bg-secondary-container transition-all duration-500 group-hover:w-16"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Complete ESD Solutions Ecosystem -->
+<section class="py-section-gap bg-surface-container-low overflow-hidden">
+<div class="px-margin-desktop max-w-container-max mx-auto text-center mb-16 scroll-reveal visible">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">The Complete ESD Ecosystem</h2>
+<p class="text-on-surface-variant">Our holistic approach ensures every gap in your static safety protocol is addressed.</p>
+</div>
+<div class="relative max-w-4xl mx-auto px-margin-mobile scroll-reveal visible">
+<!-- Flow Diagram (Simplified for UI) -->
+<div class="grid grid-cols-1 md:grid-cols-7 gap-4 items-center">
+<div class="flex flex-col items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center font-bold shadow-lg">01</div>
+<span class="font-label-caps text-label-caps text-center">Consultation</span>
+</div>
+<div class="hidden md:block h-[2px] bg-primary-container flex-1"></div>
+<div class="flex flex-col items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center font-bold shadow-lg">02</div>
+<span class="font-label-caps text-label-caps text-center">Audit</span>
+</div>
+<div class="hidden md:block h-[2px] bg-primary-container flex-1"></div>
+<div class="flex flex-col items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center font-bold shadow-lg">03</div>
+<span class="font-label-caps text-label-caps text-center">EPA Setup</span>
+</div>
+<div class="hidden md:block h-[2px] bg-primary-container flex-1"></div>
+<div class="flex flex-col items-center gap-4">
+<div class="w-20 h-20 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold shadow-xl border-4 border-white">SAFE</div>
+<span class="font-label-caps text-label-caps text-center font-bold text-primary">Certified</span>
+</div>
+</div>
+<div class="mt-12 p-8 bg-white rounded-3xl border border-primary/10 shadow-xl flex flex-wrap justify-center gap-12">
+<div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">done_all</span> Products</div>
+<div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">done_all</span> Training</div>
+<div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">done_all</span> Grounding</div>
+<div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">done_all</span> Validation</div>
+</div>
+</div>
+</section>
+<!-- Trust Stats & Map -->
+<section class="py-section-gap relative overflow-hidden bg-white">
+<div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="scroll-reveal visible">
+<h2 class="font-headline-md text-headline-md text-primary mb-8">Unmatched PAN India Presence</h2>
+<div class="grid grid-cols-2 gap-x-12 gap-y-12">
+<div>
+<div class="text-5xl font-bold text-primary mb-2" id="stat-products">500+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Products Available</p>
+</div>
+<div>
+<div class="text-5xl font-bold text-primary mb-2" id="stat-industries">12+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Industries Served</p>
+</div>
+<div>
+<div class="text-5xl font-bold text-primary mb-2" id="stat-rfq">2k+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">RFQs Handled</p>
+</div>
+<div>
+<div class="text-5xl font-bold text-primary mb-2">100%</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">PAN India Coverage</p>
+</div>
+</div>
+</div>
+<div class="relative scroll-reveal visible">
+<!-- Abstract India Map Graphic -->
+<div class="w-full h-[500px] opacity-10 absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,#00408b_0%,transparent_70%)] rounded-full blur-3xl"></div>
+<div class="relative w-full aspect-square flex items-center justify-center">
+<!-- Replace with actual SVG path or map visual -->
+<div class="w-4/5 h-4/5 border-2 border-dashed border-primary/20 rounded-full animate-[spin_60s_linear_infinite] absolute"></div>
+<div class="bg-surface-container p-12 rounded-3xl border border-outline-variant shadow-2xl relative z-10 overflow-hidden">
+<div class="text-primary-container mb-4">
+<span class="material-symbols-outlined text-6xl">public</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-2">Strategic Supply Chain</h3>
+<p class="text-on-surface-variant">Our distribution network ensures that high-quality ESD products are available to every industrial corridor in India, from Bangalore to Bawal.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Download Center -->
+<section class="py-section-gap bg-surface-container-highest">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<h2 class="font-headline-md text-headline-md text-primary text-center mb-16 scroll-reveal visible">Resource Center</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Resource 1 -->
+<div class="bg-white p-8 rounded-2xl flex items-center gap-6 scroll-reveal hover:bg-primary hover:text-white transition-all group cursor-pointer visible">
+<span class="material-symbols-outlined text-5xl text-primary group-hover:text-white">description</span>
+<div>
+<h4 class="font-bold text-lg mb-1">Company Profile</h4>
+<p class="text-sm opacity-70">Learn more about our journey and vision.</p>
+</div>
+</div>
+<!-- Resource 2 -->
+<div class="bg-white p-8 rounded-2xl flex items-center gap-6 scroll-reveal hover:bg-primary hover:text-white transition-all group cursor-pointer visible">
+<span class="material-symbols-outlined text-5xl text-primary group-hover:text-white">menu_book</span>
+<div>
+<h4 class="font-bold text-lg mb-1">Product Catalogue</h4>
+<p class="text-sm opacity-70">Complete 2024 range with technical specs.</p>
+</div>
+</div>
+<!-- Resource 3 -->
+<div class="bg-white p-8 rounded-2xl flex items-center gap-6 scroll-reveal hover:bg-primary hover:text-white transition-all group cursor-pointer visible">
+<span class="material-symbols-outlined text-5xl text-primary group-hover:text-white">biotech</span>
+<div>
+<h4 class="font-bold text-lg mb-1">Technical Brochure</h4>
+<p class="text-sm opacity-70">Deep dive into ESD materials &amp; compliance.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Request a Quote Section -->
+<section class="py-section-gap bg-surface-container-low scroll-reveal">
+<div class="px-margin-desktop max-w-container-max mx-auto text-center">
+<div class="max-w-4xl mx-auto">
+<h2 class="font-display-lg text-headline-md md:text-display-lg text-primary mb-6 leading-tight font-bold">Ready to Secure Your Manufacturing Environment?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
+                Contact our ESD experts for a customized solution tailored to your facility's requirements.
+            </p>
+<button class="bg-primary text-white px-10 py-5 rounded-xl font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-primary/20 inline-flex items-center gap-3">
+                Request Quote
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Final CTA (FAQ) -->
+<section class="py-section-gap px-margin-desktop"><div class="px-margin-desktop max-w-container-max mx-auto"><div class="text-center mb-16 scroll-reveal visible"><h2 class="font-headline-md text-headline-md text-primary mb-4">Frequently Asked Questions</h2><p class="text-on-surface-variant max-w-2xl mx-auto">Quick answers to common inquiries about our ESD products and partnership process.</p></div><div class="max-w-3xl mx-auto space-y-4"><div class="bg-white rounded-2xl border border-outline-variant overflow-hidden transition-all hover:shadow-md"><details class="group"><summary class="flex items-center justify-between p-6 cursor-pointer list-none"><span class="font-bold text-on-surface">What is ESD?</span><span class="material-symbols-outlined text-primary transition-transform group-open:rotate-180">expand_more</span></summary><div class="px-6 pb-6 text-on-surface-variant">ESD (Electrostatic Discharge) is the sudden transfer of static electricity between objects. It can damage sensitive electronic components and affect manufacturing processes.</div></details></div><div class="bg-white rounded-2xl border border-outline-variant overflow-hidden transition-all hover:shadow-md"><details class="group"><summary class="flex items-center justify-between p-6 cursor-pointer list-none"><span class="font-bold text-on-surface">Why is ESD protection important?</span><span class="material-symbols-outlined text-primary transition-transform group-open:rotate-180">expand_more</span></summary><div class="px-6 pb-6 text-on-surface-variant">Proper ESD protection helps prevent product failures, improves quality, reduces rejection rates and protects sensitive electronic assemblies.</div></details></div><div class="bg-white rounded-2xl border border-outline-variant overflow-hidden transition-all hover:shadow-md"><details class="group"><summary class="flex items-center justify-between p-6 cursor-pointer list-none"><span class="font-bold text-on-surface">Which industries require ESD products?</span><span class="material-symbols-outlined text-primary transition-transform group-open:rotate-180">expand_more</span></summary><div class="px-6 pb-6 text-on-surface-variant">Electronics manufacturing, PCB assembly, EMS companies, semiconductor facilities, medical device manufacturing, cleanrooms and automotive electronics industries commonly require ESD protection.</div></details></div><div class="bg-white rounded-2xl border border-outline-variant overflow-hidden transition-all hover:shadow-md"><details class="group"><summary class="flex items-center justify-between p-6 cursor-pointer list-none"><span class="font-bold text-on-surface">Do you supply products across India?</span><span class="material-symbols-outlined text-primary transition-transform group-open:rotate-180">expand_more</span></summary><div class="px-6 pb-6 text-on-surface-variant">Yes. StaticSafe India Pvt. Ltd. supplies ESD and Anti-Static products across India.</div></details></div><div class="bg-white rounded-2xl border border-outline-variant overflow-hidden transition-all hover:shadow-md"><details class="group"><summary class="flex items-center justify-between p-6 cursor-pointer list-none"><span class="font-bold text-on-surface">Do you provide ESD protected area setup?</span><span class="material-symbols-outlined text-primary transition-transform group-open:rotate-180">expand_more</span></summary><div class="px-6 pb-6 text-on-surface-variant">Yes, we provide comprehensive consultation and setup services for EPA (Electrostatic Protected Areas) to ensure full compliance with international standards.</div></details></div></div></div></section>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-tertiary-fixed w-full pt-section-gap pb-8 text-on-primary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="mb-6">
+<img alt="StaticSafe India Logo" class="h-16 w-auto mb-4 brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAke_mmc2c-kYAivbMdwAnLAClLp70h0GGWEhzSiImDhIJAAxKOv12vDBJFw-MqpboxsulMWgOvyZO80shxICEKzyT3h7hN4NaR7w2C9rA3C0w5CM60mgUwCWd2peUBDcT_5iaw7Vv3sOiVy9Gvh2gKcPpLzG7DG_D5QwHiO5cFzPOCF3sIQIPYGWL8stMTbKYU36TSndRuD9SRGQm0k6oUNaPseCHxuufu1Q88QNRUKSItJ8pLpNgU62dTCYYAR9WBDydzZTQI-7GdJs">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-primary">StaticSafe</span>
+<span class="text-sm text-primary-fixed opacity-80">India Pvt. Ltd.</span>
+</div>
+</div>
+<p class="text-primary-fixed mb-6 opacity-80">Your trusted partner for comprehensive Electrostatic Discharge control and cleanroom solutions across India.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-white">face_nod</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-white">alternate_email</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-white">rss_feed</span>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-secondary-fixed-dim">Quick Links</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-primary-fixed hover:text-white transition-opacity" href="#">Sitemap</a></li>
+<li class=""><a class="text-primary-fixed hover:text-white transition-opacity" href="#">Privacy Policy</a></li>
+<li class=""><a class="text-primary-fixed hover:text-white transition-opacity" href="#">Certifications</a></li>
+<li class=""><a class="text-primary-fixed hover:text-white transition-opacity" href="#">PAN India Presence</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-secondary-fixed-dim">Product Lines</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-primary-fixed hover:text-white transition-opacity" href="#">ESD Workstations</a></li>
+<li class=""><a class="text-primary-fixed hover:text-white transition-opacity" href="#">Ionization Systems</a></li>
+<li class=""><a class="text-primary-fixed hover:text-white transition-opacity" href="#">Cleanroom Supplies</a></li>
+<li class=""><a class="text-primary-fixed hover:text-white transition-opacity" href="#">ESD Footwear</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-secondary-fixed-dim">Corporate Office</h4>
+<p class="text-primary-fixed opacity-80 leading-relaxed">
+                    Plot No. 42, Industrial Area,<br>
+                    Phase II, Gurgaon, Haryana<br>
+                    India - 122001
+                </p>
+<div class="mt-6 flex items-center gap-3 text-secondary-fixed-dim font-bold">
+<span class="material-symbols-outlined">call</span>
+                    +91 124 456 XXXX
+                </div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-section-gap pt-8 border-t border-white/10 text-center text-sm text-primary-fixed opacity-60">
+            © 2024 StaticSafe India Pvt. Ltd. All Rights Reserved. Complete ESD Solutions.
+        </div>
+</footer>
+<!-- SideNavBar (Floating Contact) -->
+<div class="fixed right-4 bottom-24 flex flex-col gap-4 z-50">
+<a class="bg-surface-container-highest text-primary rounded-full p-4 shadow-md hover:scale-110 transition-transform active:scale-95 group relative" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="absolute right-full mr-4 bg-primary text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">WhatsApp</span>
+</a>
+<a class="bg-surface-container-highest text-primary rounded-full p-4 shadow-md hover:scale-110 transition-transform active:scale-95 group relative" href="#">
+<span class="material-symbols-outlined">call</span>
+<span class="absolute right-full mr-4 bg-primary text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Call</span>
+</a>
+<a class="bg-primary text-white rounded-full p-4 shadow-md hover:scale-110 transition-transform active:scale-95 group relative" href="#">
+<span class="material-symbols-outlined">request_quote</span>
+<span class="absolute right-full mr-4 bg-primary text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Quote</span>
+</a>
+</div>
+<script class="">
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+        // Basic Navbar effect on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50</script></body></html>
