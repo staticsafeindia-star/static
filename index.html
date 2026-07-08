@@ -1956,41 +1956,27 @@ Fast delivery and support across manufacturing hubs in India.
 <!-- ========================================= -->
 
 <style>
-
 html{
     scroll-behavior:smooth;
 }
 
 @keyframes whatsappPulse{
-
-0%{
-transform:scale(1);
-}
-
-50%{
-transform:scale(1.08);
-}
-
-100%{
-transform:scale(1);
-}
-
+    0%{transform:scale(1);}
+    50%{transform:scale(1.08);}
+    100%{transform:scale(1);}
 }
 
 .animate-whatsapp{
-animation:whatsappPulse 2.5s infinite;
+    animation:whatsappPulse 2.5s infinite;
 }
-
 </style>
 
-
-<div class="fixed right-5 bottom-6 z-50 flex flex-col gap-3">
+<div class="fixed right-5 bottom-6 z-50 flex flex-col items-center gap-4">
 
     <!-- WhatsApp -->
-
     <a href="https://wa.me/917789000027"
        target="_blank"
-       class="group animate-whatsapp flex items-center justify-center w-16 h-16 rounded-full bg-[#25D366] text-white shadow-[0_15px_40px_rgba(37,211,102,0.35)] hover:scale-110 transition-all duration-300">
+       class="group relative flex items-center justify-center w-16 h-16 rounded-full bg-[#25D366] text-white shadow-[0_15px_40px_rgba(37,211,102,0.35)] hover:scale-110 transition-all duration-300 animate-whatsapp">
 
         <svg xmlns="http://www.w3.org/2000/svg"
              class="w-8 h-8 fill-current"
@@ -2006,14 +1992,11 @@ animation:whatsappPulse 2.5s infinite;
 
     </a>
 
-
-
     <!-- Call -->
-
     <a href="tel:+917789000027"
-       class="group flex items-center justify-center w-14 h-14 rounded-full bg-white border border-primary/15 text-primary shadow-lg hover:bg-primary hover:text-white hover:scale-110 transition-all duration-300">
+       class="group relative flex items-center justify-center w-14 h-14 rounded-full bg-white border border-primary/20 text-primary shadow-lg hover:bg-primary hover:text-white hover:scale-110 transition-all duration-300">
 
-        <span class="material-symbols-outlined">
+        <span class="material-symbols-outlined text-2xl">
             call
         </span>
 
@@ -2023,15 +2006,11 @@ animation:whatsappPulse 2.5s infinite;
 
     </a>
 
-
-
     <!-- Get Quote -->
-<!-- Request a Quote Section -->
-<section id="quote" class="py-section-gap bg-surface-container-low scroll-reveal">
     <a href="#quote"
-       class="group flex items-center justify-center w-14 h-14 rounded-full bg-primary text-white shadow-[0_15px_35px_rgba(0,75,160,0.35)] hover:scale-110 transition-all duration-300">
+       class="group relative flex items-center justify-center w-14 h-14 rounded-full bg-primary text-white shadow-[0_15px_35px_rgba(0,75,160,0.35)] hover:scale-110 transition-all duration-300">
 
-        <span class="material-symbols-outlined">
+        <span class="material-symbols-outlined text-2xl">
             request_quote
         </span>
 
